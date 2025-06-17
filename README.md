@@ -1,3 +1,5 @@
+Application listens on port 8080, or you can override the environment variable `PORT` to another value. 
+
 To run the application:
 
 ```
