@@ -25,7 +25,7 @@ func main() {
 	address := fmt.Sprintf(":%s", port)
 	fmt.Printf("Starting HTTP header dump server on port %s...\n", port)
 	fmt.Println("Press Ctrl+C to stop the server")
-	
+
 	log.Fatal(http.ListenAndServe(address, nil))
 }
 
@@ -49,7 +49,7 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 	// Print the JSON to console
 	fmt.Printf("Request from %s %s\n", r.Method, r.URL.Path)
 	fmt.Println(string(jsonData))
-	
+
 	// Return 200 OK response
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("OK"))
